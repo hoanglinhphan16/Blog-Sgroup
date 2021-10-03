@@ -8,13 +8,13 @@
     >
     <!-- full width image  -->
     <figure class="full-width">
-      <img :src="blogs[$route.params.id].thumbnail" />
+      <img :src="post[$route.params.id].blogCoverPhoto" />
     </figure>
     <!-- below image  -->
     <div class="content">
       <!-- author information -->
       <div class="author">
-        <div class="text">
+        <!-- <div class="text">
           <img :src="blogs[$route.params.id].avatar" alt="" />
           <div>
             <p>{{ blogs[$route.params.id].author }}</p>
@@ -22,7 +22,7 @@
               >{{ blogs[$route.params.id].createdAt }}.4 min read</span
             >
           </div>
-        </div>
+        </div> -->
         <div class="socialButton">
           <div><i class="fab fa-facebook"></i></div>
           <div><i class="fab fa-twitter"></i></div>
@@ -30,8 +30,8 @@
       </div>
       <!-- main content  -->
       <main>
-        <p>{{ blogs[$route.params.id].content }}</p>
-        <p
+        <p>{{ post[$route.params.id].createBlogContent }}</p>
+        <!-- <p
           style="font-size: 2rem; padding: 40px 0px 20px 0px; font-weight: 700"
         >
           Next on the pipeline
@@ -39,11 +39,11 @@
         <p>{{ blogs[$route.params.id].content }}</p>
         <img src="https://www.linkpicture.com/q/angle.jpg" alt="" />
         <p>{{ blogs[$route.params.id].content }}</p>
-        <p>{{ blogs[$route.params.id].content }}</p>
+        <p>{{ blogs[$route.params.id].content }}</p> -->
       </main>
       <postBottom />
       <!-- furtherReading -->
-      <div class="wrapper">
+      <!-- <div class="wrapper">
         <div
           v-for="blog in paginatedItems"
           :key="'blog-' + blog.id"
@@ -54,7 +54,7 @@
             <p>{{ blog.title }}</p>
           </article>
         </div>
-      </div>
+      </div> -->
         <b-row>
         <b-col class="mt-3">
           <b-pagination
